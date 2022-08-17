@@ -13,7 +13,9 @@ export type AccessibleValue<T> =
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  testValue!: { accessible?: AccessibleValue<string> };
+  testValue: { accessible?: AccessibleValue<string> } = {
+    accessible: { isAccessible: true, value: 'type narrowing test' },
+  };
   stringOnlyToTest!: string;
 
   test() {
